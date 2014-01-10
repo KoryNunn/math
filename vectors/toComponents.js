@@ -1,6 +1,6 @@
-module.exports = function(radians, magnitude){
-    return [
-        Math.cos(magnitude) * radians,
-        Math.sin(magnitude) * radians
-    ];
+module.exports = function(magnitude, angle /* radians */) {
+    return {
+      x: Math.cos(angle) * magnitude,
+      y: Math.sin(angle) * magnitude
+    };
 };
