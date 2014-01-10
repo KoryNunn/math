@@ -1,9 +1,14 @@
 /**
-    Vector to Components:
+    ## Vector to Components ##
 
-    toComponents(magnatude, angle in degrees)
+        toComponents(magnatude, angle in degrees)
 
     returns x,y
+
+    Real world example:
+
+    convert an angle and a distance into a difference in x,y
+
 */
 
 module.exports = function(magnitude, angle) {
