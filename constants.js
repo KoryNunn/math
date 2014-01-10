@@ -1,4 +1,4 @@
-var pi = Math.PI();
+var pi = Math.PI;
 
 module.exports = {
     pi: pi,

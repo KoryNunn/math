@@ -4,7 +4,7 @@ module.exports = {
         toComponents: require('./vectors/toComponents')
     },
     angles: {
-        toComponents: require('./angles/degreesToRadians'),
-        toComponents: require('./angles/radiansToDegrees')
+        degreesToRadians: require('./angles/degreesToRadians'),
+        radiansToDegrees: require('./angles/radiansToDegrees')
     }
 };
