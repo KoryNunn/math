@@ -11,15 +11,16 @@ grape.Test.prototype.closeTo = function isCloseTo(expected, actual, precision, m
     
     var ok = Math.abs(expected - actual) < (Math.pow(10, -precision) / 2);
 
-    message = (message || "");
-    message += ok ? "" : " Expected " + actual + " to be close to " + expected + " (Difference: " + (expected - actual) + ", Precision: " + precision + ")";  
+    if (!ok) {
+       message = (message || "") + " Expected " + actual + " to be close to " + expected + " (Difference: " + (expected - actual) + ", Precision: " + precision + ")";  
+    }
 
-     this._assert({
-           ok: ok,
-           message : message,
-           operator : 'closeTo',
-           expected : expected,
-           actual : actual
-       });      
+    this._assert({
+          ok: ok,
+          message : message,
+          operator : 'closeTo',
+          expected : expected,
+          actual : actual
+        });      
 }
 
