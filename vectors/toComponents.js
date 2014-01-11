@@ -1,6 +1,19 @@
-module.exports = function(radians, magnitude){
-    return [
-        Math.cos(magnitude) * radians,
-        Math.sin(magnitude) * radians
-    ];
+/**
+    ## Vector to Components ##
+
+        toComponents(magnatude, angle in degrees)
+
+    returns x,y
+
+    Real world example:
+
+    convert an angle and a distance into a difference in x,y
+
+*/
+
+module.exports = function(magnitude, angle) {
+    return {
+      x: Math.cos(angle) * magnitude,
+      y: Math.sin(angle) * magnitude
+    };
 };

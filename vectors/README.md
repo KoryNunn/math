@@ -1,1 +1,1 @@
-Math functions for working with Euclidean Vectors.
+Math functions for working with Vectors.
