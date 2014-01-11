@@ -3,13 +3,15 @@
 */
 
 var grape = require('grape'),
-    math = require('../../');
+    math = require('../../'),
+    helpers = require('../helpers');
 
 grape('Vector component deconstruction', function(t){
     t.plan(2);
 
-    var actual = math.vectors.toComponents(2, math.constants.pi / 6 /* 30 degrees */);
+    var thirtyDegrees = math.constants.pi / 6;
+    var actual = math.vectors.toComponents(2,  thirtyDegrees);
 
-    t.equal(actual.x, Math.sqrt(3));
-    t.equal(actual.y, 1.0);
+    t.closeTo(actual.x, Math.sqrt(3));
+    t.closeTo(actual.y, 1.0);
 });
