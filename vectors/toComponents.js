@@ -1,7 +1,7 @@
 /**
     ## Vector to Components ##
 
-        toComponents(magnatude, angle in degrees)
+        toComponents(magnatude, angle in radians)
 
     returns x,y
 
