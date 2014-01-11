@@ -1,7 +1,7 @@
 /**
  ## Vector scaling - increase the magnitude of the vector, without affecting the direction##
 
- addition(A - one polar vector, k - a scalar, some constant amount to scale by)
+ addition(vectorA - one polar vector, konstant - a scalar, some constant amount to scale by)
 
  returns {magnitude, direction expressed as an angle in radians}
 
@@ -11,9 +11,9 @@
 
  */
 
-module.exports = function(A, k) {
+module.exports = function(vectorA, konstant) {
     return {
-        magnitude: A.magnitude * k,
-        direction: A.direction
+        magnitude: vectorA.magnitude * konstant,
+        direction: vectorA.direction
     };
 };

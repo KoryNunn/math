@@ -1,7 +1,7 @@
 /**
  ## Vector addition - add two vectors expressed in polar notation ##
 
- addition(A - one polar vector, B - one polar vector)
+ addition(vectorA - one polar vector, vectorB - one polar vector)
 
  returns {magnitude, direction expressed as an angle in radians}
 
@@ -16,9 +16,9 @@
 var fromComponents = require('./fromComponents'),
     toComponents = require('./toComponents');
 
-module.exports = function(A, B) {
-    var aComponents = toComponents(A.magnitude, A.direction);
-    var bComponents = toComponents(B.magnitude, B.direction);
+module.exports = function(vectorA, vectorB) {
+    var aComponents = toComponents(vectorA.magnitude, vectorA.direction);
+    var bComponents = toComponents(vectorB.magnitude, vectorB.direction);
 
     return fromComponents(aComponents.x + bComponents.x, aComponents.y + bComponents.y);
 };
