@@ -9,6 +9,6 @@
   "author": "",
   "license": "BSD",
   "devDependencies": {
-    "grape": "~0.1.7"
+    "grape": "0.1.x"
   }
 }
