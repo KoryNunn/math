@@ -1,7 +1,7 @@
 /**
     ## Greatest common divisor ##
 
-        isNatural(anyInteger)
+        greatestCommonDivisor(anyInteger)
 
     returns a natural number
 

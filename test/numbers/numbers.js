@@ -6,19 +6,23 @@ var grape = require('grape'),
     math = require('../../');
 
 grape('For powers of two', function(t) {
-    t.plan(6);
+    t.plan(8);
 
     t.ok(math.numbers.isPowerOfTwo(256));
 
     t.ok(math.numbers.isPowerOfTwo(4096));
 
-    t.ok(math.numbers.isPowerOfTwo(0));
+    t.notOk(math.numbers.isPowerOfTwo(0));
 
     t.ok(math.numbers.isPowerOfTwo(1));
 
     t.notOk(math.numbers.isPowerOfTwo(7));
 
-    t.notOk(math.numbers.isPowerOfTwo(-3));
+    t.notOk(math.numbers.isPowerOfTwo(-4));
+
+    t.notOk(math.numbers.isPowerOfTwo(undefined));
+
+    t.notOk(math.numbers.isPowerOfTwo(null));
 });
 
 grape('For natural numbers', function(t) {

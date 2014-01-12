@@ -9,11 +9,17 @@
 
     - Test if a series of bits needs padding.
 
-    - Efficently test the outout of a function that should only return values that are powers of two (say memory sizes)
+    - Efficiently test the output of a function that should only return values that are powers of two (say for memory sizes)
 
 */
 
 module.exports = function isPowerOfTwo(naturalNumber) {
-    return (naturalNumber & (naturalNumber - 1)) === 0;
+    // Bitwise AND (&) compares the bits of two numbers.
+    // Powers of two always have only one bit set.
+    // Subtracting one forces all lower order bits to get flipped.
+    // Then the AND (&) ensures no other bits match between the two values,
+    // thus proving only one bit was ever flipped.
+
+    return naturalNumber && (naturalNumber & (naturalNumber - 1)) === 0;
 };
 
