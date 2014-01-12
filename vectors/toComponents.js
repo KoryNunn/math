@@ -1,19 +1,19 @@
 /**
     ## Vector to Components ##
 
-        toComponents(magnatude, angle in radians)
+        toComponents(magnitude, direction expressed as an angle in radians)
 
-    returns x,y
+    returns {x, y}
 
     Real world example:
 
-    convert an angle and a distance into a difference in x,y
+    - (2D) convert an angle and a distance into a difference in x,y
 
 */
 
-module.exports = function(magnitude, angle) {
+module.exports = function(magnitude, direction) {
     return {
-      x: Math.cos(angle) * magnitude,
-      y: Math.sin(angle) * magnitude
+      x: Math.cos(direction) * magnitude,
+      y: Math.sin(direction) * magnitude
     };
 };
