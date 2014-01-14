@@ -1,39 +1,41 @@
 /**
     ## Greatest common divisor ##
 
-        greatestCommonDivisor(anyInteger)
+        greatestCommonDivisor(integer1, integer2)
 
-    returns a natural number
+    returns a natural number [wikipedia](http://en.wikipedia.org/wiki/Greatest_common_divisor)
 
     Real world example:
-
-    - Find the largest number that divides two numbers without a remainder
+    
+    todo.
 
 */
 
-module.exports = function gcd(a, b) {
-    if (a < 0) {
+module.exports = function greatestCommonDivisor(a, b) {
+    if(a < 0){
         a = -a;
     }
 
-    if (b < 0) {
+    if(b < 0){
       b = -b;  
     }
     
-    if (b > a) {
-        var temp = a; a = b; b = temp;
+    if(b > a){
+        var temp = a;
+        a = b;
+        b = temp;
     }
     
-    while (true) {
+    while(true){
         a %= b;
         
-        if (a == 0) {
+        if(a == 0){
             return b;
         }
         
         b %= a;
         
-        if (b == 0) {
+        if(b == 0){
             return a;
         }
     }
