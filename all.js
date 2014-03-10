@@ -3,7 +3,7 @@ module.exports = {
     vectors: {
         toComponents: require('./vectors/toComponents'),
         fromComponents: require('./vectors/fromComponents'),
-        addition: require('./vectors/addition'),
+        add: require('./vectors/add'),
         scale: require('./vectors/scale')
     },
     angles: {
