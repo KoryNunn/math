@@ -4,7 +4,7 @@
 
 var grape = require('grape'),
     math = require('../../'),
-    helpers = require('../helpers');
+    closeTo = require('../closeTo');
 
 grape('Vector component deconstruction', function(t){
     t.plan(2);
@@ -12,8 +12,8 @@ grape('Vector component deconstruction', function(t){
     var thirtyDegrees = math.constants.pi / 6;
     var actual = math.vectors.toComponents(2,  thirtyDegrees);
 
-    t.closeTo(actual.x, Math.sqrt(3));
-    t.closeTo(actual.y, 1.0);
+    closeTo(t, actual.x, Math.sqrt(3));
+    closeTo(t, actual.y, 1.0);
 });
 
 grape('Vector construction from components', function(t){
@@ -23,8 +23,8 @@ grape('Vector construction from components', function(t){
 
     var actual = math.vectors.fromComponents(Math.sqrt(3), 1.0);
 
-    t.closeTo(actual.magnitude, 2);
-    t.closeTo(actual.direction, thirtyDegrees);
+    closeTo(t, actual.magnitude, 2);
+    closeTo(t, actual.direction, thirtyDegrees);
 });
 
 
@@ -35,10 +35,10 @@ grape('Vector addition', function(t){
         vectorA = math.vectors.fromComponents(10, 20),
         vectorB = math.vectors.fromComponents(20,10);
 
-    var actual = math.vectors.addition(vectorA, vectorB);
+    var actual = math.vectors.add(vectorA, vectorB);
 
-    t.closeTo(actual.magnitude, 42.426);
-    t.closeTo(actual.direction, degrees45);
+    closeTo(t, actual.magnitude, 42.426);
+    closeTo(t, actual.direction, degrees45);
 });
 
 
@@ -50,6 +50,6 @@ grape('Vector scaling', function(t){
 
     var actual = math.vectors.scale(vectorA, 15);
 
-    t.closeTo(actual.magnitude, 2 * 15);
-    t.closeTo(actual.direction, degrees30);
+    closeTo(t, actual.magnitude, 2 * 15);
+    closeTo(t, actual.direction, degrees30);
 });

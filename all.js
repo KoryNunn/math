@@ -14,5 +14,8 @@ module.exports = {
         isPowerOfTwo: require('./numbers/isPowerOfTwo'),
         isNatural: require('./numbers/isNatural'),
         greatestCommonDivisor: require('./numbers/greatestCommonDivisor')
+    },
+    geometry:{
+        pythagoreanEquation: require('./geometry/pythagoreanEquation')
     }
 };

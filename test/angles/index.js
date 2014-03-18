@@ -1,5 +1,5 @@
 var grape = require('grape'),
-    math = require('../');
+    math = require('../../');
 
 grape('Degrees to radians', function(t){
     t.plan(1);
