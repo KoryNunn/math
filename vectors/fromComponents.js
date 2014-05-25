@@ -12,11 +12,10 @@
  */
 
 module.exports = function(x, y) {
-    var squared = Math.pow(x, 2) + Math.pow(y, 2),
-        ratio = y / x;
+    var squared = Math.pow(x, 2) + Math.pow(y, 2);
 
     return {
         magnitude: Math.sqrt(squared),
-        direction: Math.atan(ratio)
+        direction: Math.atan2(y, x)
     };
 };
